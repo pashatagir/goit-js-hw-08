@@ -16,7 +16,7 @@ refs.form.addEventListener('input', throttle(onInput, 500));
 populateTextarea();
 
 function onInput(evt) {
-  formData[evt.target.name] = evt.target.value;
+  formData[evt.target.name] = evt.target.value.trim();
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
